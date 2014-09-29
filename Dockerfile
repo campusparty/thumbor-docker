@@ -19,7 +19,7 @@ ADD thumbor.conf /root/thumbor.conf
 
 RUN echo SECRET_KEY=\"`date +%s | sha256sum | base64 | head -c 32`\" >> /root/thumbor.conf
 
-VOLUME ['/root/']
+#VOLUME ['/root/']
 
 EXPOSE 8880
 
