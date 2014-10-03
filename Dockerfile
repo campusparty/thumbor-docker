@@ -14,11 +14,9 @@ RUN apt-get install -y libdc1394-22-dev libdc1394-22 libdc1394-utils
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN pip install thumbor
-#RUN pip install opencv-engine
+RUN pip install opencv-engine
 
 ADD thumbor.conf /root/thumbor.conf
-
-RUN echo SECRET_KEY=\"`date +%s | sha256sum | base64 | head -c 32`\" >> /root/thumbor.conf
 
 EXPOSE 8880
 
