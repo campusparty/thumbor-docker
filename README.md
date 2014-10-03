@@ -13,8 +13,3 @@ thumbor-docker
 
     $ docker build -t myown/thumbor-docker . 
     $ docker run -d -p 8880:8880 myown/thumbor-docker
-
-
-
-
-
