@@ -17,10 +17,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends\
 RUN pip install thumbor
 #RUN pip install opencv-engine
 
-ADD thumbor.conf /root/thumbor.conf
+ADD thumbor.conf /etc/thumbor.conf
 
 EXPOSE 8880
 
 ENTRYPOINT ["/usr/local/bin/thumbor"]
 
-CMD ["--port=8880", "-c", "/root/thumbor.conf"]
+CMD ["--port=8880", "-c", "/etc/thumbor.conf"]
